@@ -1,3 +1,15 @@
+#[derive(Debug)]
+struct Image {
+    description: String,
+    // a real image would also store the bytes that represent the image.
+}
+
+fn make_image(desc: &str) -> Image {
+    Image {
+        description: desc.to_string(),
+    }
+}
+
 fn main() {
     // variable lifetime within the block its declaration.
     let x = 5;
@@ -22,6 +34,6 @@ fn main() {
     // we can also shadow variable to difference type in same scope
     let meme = "More cowbell!";
     // TODO: get solution from Udemy about function make_image()
-    // let meme = make_image(meme); // in this example meme start with as string and then turn into image.
+    let meme = make_image(meme); // in this example meme start with as string and then turn into image.
+    println!("The meme image description is: {}", meme.description);
 }
-
