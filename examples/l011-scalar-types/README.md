@@ -32,4 +32,4 @@ There are 4 scalar types:
 - Character literals are specified using single quotes `'`
 - Character are less commonly used than UTF-8 strings in Rust
 
-
+See example: [main.rs](./src/main.rs)
