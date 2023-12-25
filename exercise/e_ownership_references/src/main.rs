@@ -28,11 +28,11 @@ fn main() {
     // Hint 1: use `.starts_with("b")` and `.contains("a")`
     // Hint 2: `&&` is the boolean "AND" operator
     //
-    //if eat(arg) {
-    //    println!("Might be bananas");
-    //} else {
-    //    println!("Not bananas");
-    //}
+    if eat(arg) {
+       println!("Might be bananas");
+    } else {
+       println!("Not bananas");
+    }
 
     // Try running this program with "boat", "banana", and "grapes" as the arguments :-)
 
@@ -47,6 +47,10 @@ fn main() {
     // println!("This material is just `{}`.", material);
     // bedazzle(&mut material);
     // println!("Wow! Now the material is `{}`!", material);
+}
+
+fn eat(arg: String) -> bool {
+    arg.starts_with("b") && arg.contains("a")
 }
 
 fn change(arg: &mut String) {
