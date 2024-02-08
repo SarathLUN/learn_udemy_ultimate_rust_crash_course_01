@@ -26,6 +26,8 @@ fn main() {
     println!("main function after join thread.");
     println!("accessing var_main after thread after join: {}",var_main);
     //TODO: try to change value of var_main after thread after join
+    var_main = 4;
+    println!("changed value of var_main after join: {}", var_main);
 
     // create another thread that move the main_var_2
     let my_move_thread = thread::spawn(move || {
