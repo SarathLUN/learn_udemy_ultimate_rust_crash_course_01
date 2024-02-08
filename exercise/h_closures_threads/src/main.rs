@@ -64,7 +64,7 @@ fn main() {
     let tx2 = tx.clone();
 
     let handle_a = thread::spawn(move || {
-        pause_ms(0);
+        pause_ms(500);
         tx2.send("Thread A: 1").unwrap();
         pause_ms(200);
         tx2.send("Thread A: 2").unwrap();
@@ -132,5 +132,5 @@ fn main() {
     handle_3.join().unwrap();
     handle_4.join().unwrap();
 
-    println!("Main thread: Exiting.")
+    println!("Main thread: Exiting.");
 }
